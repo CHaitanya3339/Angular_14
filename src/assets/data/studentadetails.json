@@ -1,0 +1,52 @@
+[
+    {
+      "firstname": "John",
+      "lastname": "Doe",
+      "subject": "Mathematics"
+    },
+    {
+      "firstname": "Jane",
+      "lastname": "Smith",
+      "subject": "History"
+    },
+    {
+      "firstname": "David",
+      "lastname": "Johnson",
+      "subject": "Science"
+    },
+    {
+      "firstname": "Emily",
+      "lastname": "Brown",
+      "subject": "English"
+    },
+    {
+      "firstname": "Michael",
+      "lastname": "Davis",
+      "subject": "Computer Science"
+    },
+    {
+      "firstname": "Sarah",
+      "lastname": "Wilson",
+      "subject": "Art"
+    },
+    {
+      "firstname": "Daniel",
+      "lastname": "Miller",
+      "subject": "Physics"
+    },
+    {
+      "firstname": "Olivia",
+      "lastname": "Martinez",
+      "subject": "Chemistry"
+    },
+    {
+      "firstname": "James",
+      "lastname": "Taylor",
+      "subject": "Geography"
+    },
+    {
+      "firstname": "Ava",
+      "lastname": "Anderson",
+      "subject": "Physical Education"
+    }
+  ]

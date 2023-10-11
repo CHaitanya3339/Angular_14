@@ -1,0 +1,60 @@
+<h3 class ="display-6" align="center">Students List</h3><hr>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">S No.</th>
+        <th scope="col">Firstname</th>
+        <th scope="col">Lastname</th>
+        <th scope="col">Subject</th>    
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let student of studentList; index as i">
+  <tr>
+    <td>{{i+1}}</td>
+    <td>
+    <ng-container *ngIf="i !== editIndex; else editFirst">
+      {{student.firstname}}
+    </ng-container>
+    <ng-template #editFirst>
+      <input type="text" [(ngModel)]="editedFirstName" >
+    </ng-template>
+  </td>
+  <td>
+    <ng-container *ngIf="i !== editIndex; else editLast">
+      {{student.lastname}}
+    </ng-container>
+    <ng-template #editLast>
+      <input type="text" [(ngModel)]="editedLastName">
+    </ng-template>
+  </td>
+  <td>
+    <ng-container *ngIf="i !== editIndex; else editSub">
+      {{student.subject}}
+    </ng-container>
+    <ng-template #editSub>
+      <input type="text" [(ngModel)]="editedSubject">
+    </ng-template>
+  </td>  
+    <td>
+      <ng-container *ngIf="i !== editIndex; else editButtons">
+        <a class='btn btn-info edit-button' (click)="editRow(i)">
+          Edit
+        </a>
+        &nbsp;
+        <a class='btn btn-danger delete-button' (click)="deleteRow(i)">
+          Delete
+        </a>
+      </ng-container>
+      <ng-template #editButtons>
+        <a class='btn btn-success save-button' (click)="saveRow(i)">
+          Save
+        </a>&nbsp;
+        <a class='btn btn-warning cancel-button' (click)="cancelEdit()">
+          Cancel
+        </a>
+      </ng-template>
+    </td>
+  </tr>
+</tbody>
+</table>
